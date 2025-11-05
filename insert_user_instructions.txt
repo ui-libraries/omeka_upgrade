@@ -1,0 +1,15 @@
+This is what I used to insert a user in the database:
+
+INSERT INTO users_table (username, name, email, role, active, salt, password)
+VALUES (
+  'user_username',
+  'Update User',
+  'fakeemail@mindyobiznez.com',
+  'super',                
+  1,
+  'random_salt_here',
+  SHA1(CONCAT('random_salt_here','user_password'))
+);
+
+
+Replace username, password, or whatever values you want with your desired criteria.
